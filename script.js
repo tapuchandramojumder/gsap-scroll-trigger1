@@ -6,7 +6,6 @@ gsap.to("#page2 img",{
         scroller:"body",
         start:"top 0%",
         end:"top -100%",
-        markers:true,
         scrub:2,
         pin:true
     }
@@ -15,14 +14,27 @@ gsap.to("#page2 img",{
 // Text animaation start top 0 and finished top 100% where page was pin, in this case Horizontal scrolling happened
 
 gsap.to("#page3 h1",{
-    transform:"translateX(-90%)",
+    transform:"translateX(-200%)",
     scrollTrigger:{
         trigger:"#page3",
         scroller:"body",
         start:"top 0%",
         end:"top -100%",
-        markers:true,
-        scrub:3,
+        scrub:2,
+        duration:4,
         pin:true
     }
 })
+
+gsap.from("#page4", {
+    opacity: 0,
+    scale: 0.5,
+    scrollTrigger: {
+        trigger: "#page4",
+        scroller: "body",
+        start: "top 80%",
+        end: "top 20%",
+        scrub: 1,
+        
+    }
+});
